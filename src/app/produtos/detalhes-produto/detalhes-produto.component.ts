@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ICarrinho } from 'src/app/carrinho';
-import { CarrinhoService } from 'src/app/carrinho.service';
-import { NotificacaoService } from 'src/app/notificacao.service';
+import { CarrinhoService } from 'src/app/services/carrinho.service';
+import { NotificacaoService } from 'src/app/services/notificacao.service';
 import { IProduto } from 'src/app/produtos';
 
-import { ProdutosService } from '../produtos.service';
+import { ProdutosService } from '../../services/produtos.service';
 
 @Component({
   selector: 'app-detalhes-produto',
