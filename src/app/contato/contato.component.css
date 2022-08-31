@@ -46,7 +46,7 @@
 input {
   border: solid 1px var(--gray);
 }
-
+/*
 input:hover {
   border: solid 2px var(--blue);
-}
+} */
