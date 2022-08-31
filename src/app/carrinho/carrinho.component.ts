@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { ICarrinho } from '../carrinho';
 import { CarrinhoService } from '../services/carrinho.service';
+import { NotificacaoService } from '../services/notificacao.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -14,6 +15,7 @@ export class CarrinhoComponent implements OnInit {
 
   constructor(
     private readonly carrinhoService: CarrinhoService,
+    private readonly notificacaoService: NotificacaoService,
     private readonly router: Router
   ) {}
 
@@ -38,7 +40,7 @@ export class CarrinhoComponent implements OnInit {
   comprar() {
     this.itemsCarrinho = [];
     this.carrinhoService.limparCarrinho();
-    alert('Sua compra foi concluída!');
+    this.notificacaoService.notificar('Compra efetuada com sucesso!');
     this.router.navigate(['produtos']);
   }
 }
